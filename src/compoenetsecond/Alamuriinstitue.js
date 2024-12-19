@@ -31,7 +31,9 @@ const AlamuriInstitute = () => {
           <span className="bg-green-100 text-green-700 px-2 py-1 text-xs rounded-md">
             Popular
           </span>
+          
         </div>
+        
 
         {/* Location and Gallery */}
         <div className="flex items-center justify-between mb-4">
