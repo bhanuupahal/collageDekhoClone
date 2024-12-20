@@ -47,7 +47,7 @@ const FacultyDirectory = () => {
             >
               <div className="w-24 h-24 rounded-full overflow-hidden bg-white mb-4">
                 <img
-                  src={faculty.imageUrl}
+                  src={placeholer}
                   alt={faculty.name}
                   className="w-full h-full object-cover"
                 />

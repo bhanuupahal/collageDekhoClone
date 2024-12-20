@@ -23,16 +23,10 @@ function AdmissionInfo() {
             <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
               Connect Now
             </button>
-            <div>
-              <img src={question}/>
-            </div>
+           
           </div>
           <div className="w-64 h-48 relative">
-            <img
-              src="/placeholder.svg"
-              alt="Expert guidance illustration"
-              className="w-full h-full object-contain"
-            />
+          <img src={question}/>
           </div>
         </div>
       </div>
@@ -88,7 +82,7 @@ function AdmissionInfo() {
           </div>
           <div className="hidden lg:block w-64 h-48 relative">
             <img
-              src="/placeholder.svg"
+              src={question}
               alt="Prediction illustration"
               className="w-full h-full object-contain"
             />

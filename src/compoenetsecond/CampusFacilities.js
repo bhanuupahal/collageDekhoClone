@@ -6,6 +6,7 @@ import alamuri4 from "../compoenetsecond/iamge/alamuri4.jpg";
 import amamuri1 from "../compoenetsecond/iamge/amamuri1.jpg";
 import parliament from "../compoenetsecond/iamge/parliament_of_india.jpg";
 import placeholder from "../compoenetsecond/iamge/placeholder-alumni.svg"
+import question from '../compoenetsecond/iamge/askQueCtaIcon.8c3ad181.svg'
 
 function CampusFacilities() {
   const [isQuestionOpen, setIsQuestionOpen] = useState(false);
@@ -88,7 +89,7 @@ function CampusFacilities() {
           </div>
           <div className="w-64 h-48">
             <img
-              src="/placeholder.svg"
+              src={question}
               alt="Question illustration"
               className="w-full h-full object-contain"
             />
@@ -121,11 +122,7 @@ function CampusFacilities() {
         {/* Image Gallery */}
         <div className="mt-8 relative">
           <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-lg">
-            <img
-              src={images[currentImage].url}
-              alt={images[currentImage].alt}
-              className="w-full h-full object-cover"
-            />
+           
             <div className="grid grid-cols-5">
               <div>
                 <img src={alamuri1} />
