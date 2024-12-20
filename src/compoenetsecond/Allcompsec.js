@@ -54,12 +54,6 @@ function  Allcompsec() {
    <Review/>
    <Exploremore/> */}
    <Footer/>
-
-
-
-  
-   
-  
      
    </>
   );

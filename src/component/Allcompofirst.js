@@ -3,6 +3,7 @@ import Callback from "./Callback";
 import Choosecollege from "./Choosecollege";
 import { Collegeadmi } from "./Collegeadmi";
 import { Degree } from "./Degree";
+import ExamSlider from "./ExamSlider";
 import { Footer } from "./Footer";
 import Navbar from "./navbar/Navbar";
 import Perfectcollege from "./Perfectcollege";
@@ -17,14 +18,15 @@ function Allcompfirst() {
    <>
    <Navbar/>
    <Brightfuture/>
-   <Callback/>
+   <ExamSlider/>
    <Choosecollege/>
+   <Praisedmedia/>
    <Collegeadmi/>
    <Degree/>
    <Perfectcollege/>
-   <Praisedmedia/>
-   <Studentlove/>
    <Youtube/>
+   <Studentlove/>
+   <Callback/>
    <Footer/>
 
   

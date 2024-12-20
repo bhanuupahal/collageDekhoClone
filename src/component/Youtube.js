@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; // Swiper core styles
+import "swiper/css/navigation"; // Swiper navigation styles
+import "swiper/css/pagination"; // Swiper pagination styles
+import { Navigation, Pagination } from "swiper/modules";
 
 const Youtube = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const slides = [
     "https://www.youtube.com/embed/IWGNR7TbrFg?start=4", // First video
     "https://www.youtube.com/embed/iOIsemcUjNQ",         // Second video
@@ -12,18 +15,6 @@ const Youtube = () => {
     "https://www.youtube.com/embed/Zl1lsV341u0?start=1", // Sixth video
   ];
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
   return (
     <div className="relative mx-auto mt-16 w-full max-w-7xl px-4">
       {/* Title */}
@@ -31,14 +22,19 @@ const Youtube = () => {
         Top Colleges Recommended For You
       </div>
 
-      {/* Video Slider */}
-      <div className="relative overflow-hidden rounded-xl">
-        <div
-          className="flex transition-transform duration-500"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {slides.map((url, index) => (
-            <div key={index} className="flex-shrink-0 w-full">
+      {/* SwiperJS Slider */}
+      <Swiper
+        modules={[Navigation, Pagination]}
+        navigation
+        pagination={{ clickable: true }}
+        spaceBetween={20}
+        slidesPerView={1}
+        loop={true}
+        className="rounded-xl"
+      >
+        {slides.map((url, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex justify-center items-center">
               <iframe
                 src={url}
                 className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-xl"
@@ -48,23 +44,9 @@ const Youtube = () => {
                 title={`Video ${index + 1}`}
               ></iframe>
             </div>
-          ))}
-        </div>
-
-        {/* Navigation Buttons */}
-        <button
-          className="absolute top-1/2 left-2 sm:left-4 -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 sm:p-3 hover:bg-gray-900 transition duration-300"
-          onClick={handlePrev}
-        >
-          &#8592;
-        </button>
-        <button
-          className="absolute top-1/2 right-2 sm:right-4 -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 sm:p-3 hover:bg-gray-900 transition duration-300"
-          onClick={handleNext}
-        >
-          &#8594;
-        </button>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

@@ -4,9 +4,6 @@ import Allcompsec from "./compoenetsecond/Allcompsec";
 import Allcompthird from "./Thirdpage/Allcompthird";
 import Allcompfirst from './component/Allcompofirst';
 
-
-
-
 function App() {
   return (
    <>
@@ -17,7 +14,6 @@ function App() {
     <Collegeadmi/>
    
    
-   
    <Degree/>
    <Perfectcollege/>
    <AchievementsCarousel/>
@@ -26,8 +22,6 @@ function App() {
     <Callback/>
    <Studentlove/> */}
      
-
-
 
    {/* <Alamuriinstitue/>
      <Review/>
@@ -50,30 +44,15 @@ function App() {
      */}
 
     
-    
    {/* <Footer/> */}
    <BrowserRouter>
    <Routes>
     <Route path='/' element={<Allcompfirst/>}/>
     <Route path='/colleges' element={<Allcompsec/>}/>
     <Route path='/careers' element={<Allcompthird/>}/>
-
    </Routes>
-
    </BrowserRouter>
 
-
-
-
-
-
-
-
-  
-
-   
-  
-     
    </>
   );
 }

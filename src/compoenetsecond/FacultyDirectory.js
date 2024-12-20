@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight, Building, Mail, Phone, Globe } from 'lucide-react';
+import placeholer from "../compoenetsecond/iamge/placeholder-alumni.svg"
 
 const FacultyDirectory = () => {
   const facultyMembers = [
